@@ -78,27 +78,23 @@ Output:
 Patient has Hypertension, Chronic Kidney Disease and Congestive Heart Failure.
 Patient admitted to Intensive Care Unit due to Shortness of Breath.
 
-# ============================
-# PROJECT WORKFLOW
-# ============================
+## Project Workflow
 
-Input Text / PDF
-        ↓
-Regex Detection
-        ↓
-Abbreviation Extraction
-        ↓
-Ollama (Mistral)
-        ↓
-Context-Aware Expansion
-        ↓
-Expanded Clinical Narrative
+```mermaid
+flowchart TD
+    A[Input Text / PDF] --> B[Regex Detection]
+    B --> C[Abbreviation Extraction]
+    C --> D[Ollama - Mistral]
+    D --> E[Context-Aware Expansion]
+    E --> F[Expanded Clinical Narrative]
+```
 
+## Manual Search
 
-Manual Search:
-User Input
-        ↓
-UMLS API
-        ↓
-Expansion + Semantic Type
+```mermaid
+flowchart TD
+    A[User Input]
+    A --> B[UMLS API]
+    B --> C[Expansion + Semantic Type]
+```
 
